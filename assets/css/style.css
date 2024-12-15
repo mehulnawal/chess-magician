@@ -1,0 +1,226 @@
+/* fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* common css srt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --montserratFont: "Montserrat", sans-serif;
+    --robotoFont: "Roboto", serif;
+}
+
+body {
+    font-family: var(--robotoFont);
+}
+
+ul {
+    list-style: none;
+
+    li {
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.active {
+    color: #000;
+    border-bottom: 2px solid #C47E31;
+}
+
+.banner-welcome {
+    position: relative;
+}
+
+.banner-welcome::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: -7px;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: #C47E31;
+}
+
+/* common css end */
+
+/* header srt */
+header {
+    nav {
+        background-color: #FFF8E1;
+        /* background-color:#FAFAFA; */
+        /* background-color: #F8F8F8; */
+        z-index: 20;
+
+        .logo {
+            font-family: var(--montserratFont);
+            font-weight: 500;
+            color: #1E3A8A;
+            white-space: nowrap;
+
+            h5 {
+                position: relative;
+            }
+
+            .chess-piece-img {
+                width: 130px;
+            }
+        }
+
+        .nav-responsive {}
+
+        h5::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            background-color: #C47E31;
+            height: 2px;
+            width: 0%;
+            transition: all 0.4s ease-in-out;
+        }
+
+        h5:hover::before {
+            width: 100%;
+        }
+
+        .nav-links {
+            a:not(.active) {
+                color: #1E3A8A;
+                font-weight: 400;
+                font-family: var(--robotoFont);
+                padding: 12px 20px;
+            }
+
+            a:hover {
+                /* color: #E74C3C; */
+            }
+        }
+    }
+
+    .banner {
+
+        .banner-content {
+            font-weight: normal;
+            font-family: var(--robotoFont);
+            letter-spacing: 1px;
+
+            .banner-heading {
+                font-family: var(--montserratFont);
+                color: #000;
+                font-weight: 500;
+                letter-spacing: -1.5px;
+                line-height: 1.2;
+                word-break: break-word;
+                margin-top: 20px;
+
+                .gymnastics {
+                    color: #C47E31;
+                }
+            }
+
+            .subscribe-button {
+                .youtube {
+                    background-color: red;
+                    border: 2px solid red;
+                }
+
+                .instagram {
+                    background: linear-gradient(to top right, #515BD4, #8134AF, #DD2A7B);
+                }
+            }
+
+        }
+
+        .banner-right {
+
+            .banner-right-img {
+                height: 100vh;
+                background: url('../images/banner-img-bg.jpg');
+                background-size: contain;
+                background-position: right;
+                background-repeat: no-repeat;
+                /* z-index: -1; */
+            }
+
+            .queen-piece {
+                .queen-piece-img {
+                    width: 200px;
+                    top: 20%;
+                    transform: translateY(-100%);
+                    left: 0%;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+/* header end */
+
+/* body srt */
+body {
+    .about {
+        .creator {
+            .creator-img {
+                height: 300px;
+            }
+        }
+
+        .journey {
+            position: relative;
+
+            .journey-img {
+                margin: -40px 300px;
+
+            }
+
+            .started-2006 {
+                bottom: 15%;
+                left: 15%;
+            }
+
+            .u-9-2011 {
+                left: 60%;
+            }
+
+            .u-9-2012 {
+                top: 50%;
+                left: 43%;
+            }
+
+            .u-inter-2011 {
+                top: 30%;
+                left: 65%;
+            }
+
+            .u-14-2017 {
+                top: 20%;
+                left: 45%;
+            }
+        }
+
+        .featured-content {
+            grid-template-columns: auto auto auto;
+            margin-top: 50px;
+            height: fit-content;
+            background-color: beige;
+            border-radius: 10px;
+
+            .grid-item {
+                /* margin-top: 20px; */
+                height: 200px;
+
+            }
+
+        }
+    }
+}
+
+/* body end */
