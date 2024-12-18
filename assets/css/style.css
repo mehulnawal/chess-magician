@@ -1,6 +1,9 @@
 /* fonts  */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* hanken font */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 /* common css srt */
 * {
@@ -12,6 +15,7 @@
 :root {
     --montserratFont: "Montserrat", sans-serif;
     --robotoFont: "Roboto", serif;
+    --hanken : "Hanken Grotesk", serif;
 }
 
 body {
@@ -59,7 +63,7 @@ header {
         z-index: 20;
 
         .logo {
-            font-family: var(--montserratFont);
+            font-family: var(--hanken);
             font-weight: 500;
             color: #1E3A8A;
             white-space: nowrap;
@@ -72,8 +76,6 @@ header {
                 width: 130px;
             }
         }
-
-        .nav-responsive {}
 
         h5::before {
             content: '';
@@ -112,7 +114,7 @@ header {
             letter-spacing: 1px;
 
             .banner-heading {
-                font-family: var(--montserratFont);
+                font-family: var(--hanken);
                 color: #000;
                 font-weight: 500;
                 letter-spacing: -1.5px;
@@ -139,6 +141,7 @@ header {
         }
 
         .banner-right {
+            position: relative;
 
             .banner-right-img {
                 height: 100vh;
@@ -146,17 +149,17 @@ header {
                 background-size: contain;
                 background-position: right;
                 background-repeat: no-repeat;
+                background-attachment: fixed;
                 /* z-index: -1; */
             }
 
-            .queen-piece {
-                .queen-piece-img {
-                    width: 200px;
-                    top: 20%;
-                    transform: translateY(-100%);
-                    left: 0%;
-                    z-index: -1;
-                }
+            .queen-piece-img {
+                position: absolute;
+                width: 200px;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0%;
+                /* z-index: -1; */
             }
         }
     }
@@ -166,6 +169,8 @@ header {
 
 /* body srt */
 body {
+
+    /* about srt */
     .about {
         .creator {
             .creator-img {
@@ -221,6 +226,28 @@ body {
 
         }
     }
+
+    /* about end */
+
+    /* features srt */
+    .follow {
+        .features {
+            margin-top: 40px;
+            border-radius: 5px;
+            column-gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+            grid-auto-rows: 150px;
+            text-align: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .items {
+            border: 2px solid #C47E31;
+        }
+    }
+
+    /* features end */
 }
 
 /* body end */

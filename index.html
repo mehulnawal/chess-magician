@@ -20,6 +20,9 @@
     <!-- main css  -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
+    <!-- responsive css link -->
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
 </head>
 
 <body>
@@ -28,75 +31,51 @@
     <header href="#home">
 
         <!-- nav srt -->
-        <nav class="nav shadow position-fixed top-0 start-0 w-100">
-            <div class="container-fluid px-3 pt-3">
-                <div class="row justify-content-between align-items-center w-100">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow position-absolute start-0 top-0 start-0 w-100">
+            <div class="container-fluid">
 
-                    <div class="col-4">
-                        <a href="#" class="logo d-md-flex align-items-center gap-0 text-decoration-none"
-                            draggable="false">
-                            <img class="chess-piece-img" src="./assets/images/chess_piece.jpg" alt="chess-piece-img"
-                                draggable="false" />
+                <div class="nav-main d-lg-flex align-items-center justify-content-between align-content-center w-100">
 
-                            <h5 class="fs-4 m-0 logo-head">ChessMagician</h5>
-                        </a>
-                    </div>
+                    <a href="#" class="logo text-decoration-none" draggable="false">
+                        <img class="chess-piece-img" src="./assets/images/chess_piece.jpg" alt="chess-piece-img"
+                            draggable="false" />
 
-                    <div class="col-8 d-lg-block d-none">
-                        <div class="nav-links">
-                            <ul class="d-flex justify-content-around mb-0">
-                                <li>
-                                    <a href="Home" class="active fs-5">Home</a>
-                                </li>
+                        <!-- <h5 class="fs-4 m-0 logo-head">ChessMagician</h5> -->
+                    </a>
 
-                                <li>
-                                    <a href="Home" class="fs-5">About</a>
-                                </li>
+                    <button class="navbar-toggler menu-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                                <li>
-                                    <a href="Home" class="fs-5">Why follow us ?</a>
-                                </li>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
-                                <li>
-                                    <a href="Home" class="fs-5">Footer</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                        <ul class="navbar-nav d-flex justify-content-end w-100">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
 
-                    <div class="col-8 d-flex d-md-none justify-content-end">
-                        <i role="button" class="bi bi-list menu fs-3 fw-bold"></i>
-                    </div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
 
-                    <div class="col-12 d-block d-md-none nav-responsive">
-                        <div class="nav-links">
-                            <ul class="d-flex flex-column justify-content-center mb-0">
-                                <li>
-                                    <a href="Home" class="fs-5">Home</a>
-                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
 
-                                <li class="ms-0">
-                                    <a href="Home" class="fs-5">About</a>
-                                </li>
-
-                                <li>
-                                    <a href="Home" class="fs-5">Why follow us ?</a>
-                                </li>
-
-                                <li>
-                                    <a href="Home" class="fs-5">Footer</a>
-                                </li>
-                            </ul>
-                        </div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
             </div>
         </nav>
         <!-- nav end -->
 
         <!-- banner srt -->
-        <div class="banner px-3 pe-0">
+        <div class="banner px-3 pe-0 mt-4">
             <div class="container-fluid">
                 <div class="row justify-content-between align-items-center w-100">
 
@@ -107,7 +86,7 @@
                                 the
                                 mind </i></div>
 
-                        <p class="fs-5 my-4">Like gymnastics, chess can be a challenging and rewarding pursuit that
+                        <p class="fs-5 my-4 subtext">Like gymnastics, chess can be a challenging and rewarding pursuit that
                             offers both mental and
                             physical benefits for those who engage in it.</p>
 
@@ -123,17 +102,13 @@
                         </div>
                     </div>
 
-                    <div class="banner-right col-lg-7 col-md-6 col-12 p-0">
+                    <div class="banner-right col-lg-7 col-md-6 col-12 p-0 d-flex justify-content-end">
                         <img class="banner-right-img img-fluid" draggable="false"
                             src="./assets/images/bg-slider-hero-min.png" alt="">
 
-                        <div class="queen-piece position-absolute">
-                            <img class="img-fluid queen-piece-img" src="./assets/images/queen-chess-piece-banner.png"
-                                alt="">
-                        </div>
+                        <img class="img-fluid queen-piece-img" src="./assets/images/queen-chess-piece-banner.png"
+                            alt="">
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -143,7 +118,7 @@
 
     <!-- body srt -->
 
-    <body>
+    <!-- <body>
         <section href="#about" class="about px-4 pe-0">
             <div class="container-fluid">
                 <h3 class="banner-welcome">Meet Creator </h3>
@@ -153,16 +128,19 @@
                         <img class="img-fluid creator-img" src="./assets/images/creator.jpg" alt="">
                     </div>
 
-                    <div class="col-12">
-                        <div class="journey">
-                            <img draggable="false" class="journey-img" src="./assets/images/journey.png" alt="">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="journey">
+                                <img draggable="false" class="img-fluid journey-img" src="./assets/images/journey.png"
+                                    alt="">
 
-                            <h5 class="started-2006 position-absolute">Started playing in 2006</h5>
-                            <h5 class="u-9-2011 position-absolute">U-9 2011</h5>
-                            <h5 class="u-9-2012 position-absolute">U-9 2012</h5>
-                            <h5 class="u-inter-2011 position-absolute">Inter School 2017</h5>
-                            <h5 class="u-14-2017 position-absolute">U-14 2017</h5>
+                                <h5 class="started-2006 position-absolute">Started playing in 2006</h5>
+                                <h5 class="u-9-2011 position-absolute">U-9 2011</h5>
+                                <h5 class="u-9-2012 position-absolute">U-9 2012</h5>
+                                <h5 class="u-inter-2011 position-absolute">Inter School 2017</h5>
+                                <h5 class="u-14-2017 position-absolute">U-14 2017</h5>
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -181,7 +159,20 @@
                 </div>
             </div>
         </section>
-    </body>
+
+        <section href="#follow" class="follow mt-5 px-4 pe-0">
+            <div class="container-fluid">
+                <h3 class="banner-welcome">Why Follow us ?</h3>
+
+                <div class="features d-grid">
+                    <div class="items1 items">Items</div>
+                    <div class="items2 items">Items</div>
+                    <div class="items3 items">Items</div>
+                </div>
+
+            </div>
+        </section>
+    </body> -->
     <!-- body end -->
 
     <!-- footer srt -->
