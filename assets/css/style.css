@@ -296,6 +296,7 @@ body {
     /* features end */
 
     /* youtube content srt */
+    /* youtube content srt */
     .youtube-content {
         .content-main {
             height: 225px;
@@ -313,8 +314,7 @@ body {
                     position: absolute;
                     top: 0px;
                     left: 0px;
-                    background-color: #9c802e;
-                    backface-visibility: visible;
+                    background-color: #837036;
                     height: 100%;
                     width: 100%;
                     display: flex;
@@ -323,6 +323,7 @@ body {
                     visibility: hidden;
                     opacity: 0;
                     transition: all 0.5s ease-in-out;
+                    transform: scale(1.1);
                 }
             }
 
@@ -351,15 +352,18 @@ body {
                 background-position: center;
                 background-repeat: no-repeat;
             }
-
         }
 
+        /* Hover effect */
         .content-main:hover .bg {
             visibility: visible;
-            backface-visibility: visible;
-            opacity: 1;
+            opacity: 0.7;
+            transform: scale(1);
         }
     }
+
+    /* youtube content end */
+
 
     /* youtube content end */
 }
