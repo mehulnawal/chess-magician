@@ -8,6 +8,9 @@
     <!-- title -->
     <title>Chess Magician</title>
 
+    <!-- aos link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- favicon -->
     <link rel="icon" href="./assets/images/chess_piece.jpg">
 
@@ -33,54 +36,57 @@
 <body>
 
     <!-- header srt -->
-    <header href="#home">
+    <header id="home">
 
         <!-- nav srt -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow position-absolute start-0 top-0 start-0 w-100">
-            <div class="container-fluid">
+        <div class="navbar-main">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary shadow w-100">
+                <div class="container-fluid">
 
-                <div class="nav-main d-lg-flex align-items-center justify-content-between align-content-center w-100">
+                    <div
+                        class="nav-main d-lg-flex align-items-center justify-content-between align-content-center w-100">
 
-                    <a href="#" class="logo text-decoration-none" draggable="false">
-                        <img class="chess-piece-img" src="./assets/images/chess_piece.jpg" alt="chess-piece-img"
-                            draggable="false" />
+                        <a href="#" class="logo text-decoration-none" draggable="false">
+                            <img class="chess-piece-img" src="./assets/images/chess_piece.jpg" alt="chess-piece-img"
+                                draggable="false" />
 
-                        <!-- <h5 class="fs-4 m-0 logo-head">ChessMagician</h5> -->
-                    </a>
+                            <!-- <h5 class="fs-4 m-0 logo-head">ChessMagician</h5> -->
+                        </a>
 
-                    <button class="navbar-toggler menu-btn" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                        <button class="navbar-toggler menu-btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
-                        <ul class="navbar-nav d-flex justify-content-end w-100">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
+                            <ul class="navbar-nav d-flex justify-content-end w-100">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                                </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
-                            </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">About</a>
+                                </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Why follow us</a>
-                            </li>
-                            <!-- 
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#why-follow-us">Why follow us</a>
+                                </li>
+                                <!-- 
                             <li class="nav-item">
                                 <a class="nav-link" href="#">footer</a>
                             </li> -->
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
         <!-- nav end -->
 
         <!-- banner srt -->
-        <div class="banner px-3 pe-0 mt-4">
+        <div class="banner px-3 pe-0">
             <div class="container-fluid">
                 <div class="row justify-content-between align-items-center w-100">
 
@@ -126,7 +132,7 @@
 
     <body>
         <!-- about srt -->
-        <section href="#about" class="about px-4 pe-0">
+        <section id="about" data-aos-duration="1000" data-aos="fade-up" class="about px-4 pe-0">
             <div class="container-fluid">
                 <h3 class="banner-welcome">Meet Creator </h3>
 
@@ -138,59 +144,47 @@
                             <br /> beauty and complexity.
                         </h3>
 
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Quisquam asperiores,
-                            molestias
-                            maxime
-                            nobis</p>
+                        <p class="my-4">Experience the elegance of strategic moves <br /> and the challenge of mastering
+                            the game of
+                            kings.</p>
 
-                        <a href="https://www.youtube.com/@ChessMagician3" target="_blank"
-                            class="text-decoration-none youtube d-flex gap-2 text-black">
-                            <i class="fa-brands fa-youtube youtube-icon fs-3"></i>
 
-                            <div class="">
-                                <h6 class="title fs-5">Youtube</h6>
-                                <p class="youtube-subtext">Click to Subscribe</p>
-                            </div>
+                        <div class="main">
+                            <a href="https://www.youtube.com/@ChessMagician3" target="_blank"
+                                class="text-decoration-none d-flex align-items-start gap-2 text-black subscribe-button">
 
-                        </a>
+                                <button type="button" class="youtube btn btn-secondary ">Youtube</button>
 
-                        <a href="" class="text-decoration-none youtube d-flex gap-2 text-black mt-2" target="_blank">
-                            <i class="fa-brands fa-square-instagram fs-3"></i>
+                                <div class="">
+                                    <h6 class="title fs-5">Youtube</h6>
+                                    <p class="youtube-subtext">Click to Subscribe</p>
+                                </div>
+                            </a>
+                        </div>
 
-                            <div class="">
-                                <h6 class="title fs-5">Instagram</h6>
-                                <p class="youtube-subtext">Click to Follow</p>
-                            </div>
+                        <div class="main">
+                            <a href=""
+                                class="text-decoration-none youtube d-flex align-items-start gap-2 text-black mt-2 subscribe-button d-inline-block"
+                                target="_blank">
 
-                        </a>
+                                <button type="button" class="instagram btn btn-secondary">Instagram</button>
 
-                        <div>
+                                <div class="">
+                                    <h6 class="title fs-5">Instagram</h6>
+                                    <p class="youtube-subtext">Click to Follow</p>
+                                </div>
 
+                            </a>
                         </div>
 
                     </div>
 
                     <div class="col-lg-6 col-12 about-right-main">
 
-                        <div class="about-right-bg px-3">
-                            <div class="about-right-img text-opacity-25 d-flex align-items-center">
-
-                                <div class="col-6">
-                                    <h5>Full of passion and dedication. Welcome to a chess school that is always ready
-                                        to
-                                        help
-                                        you
-                                        improve</h5>
-
-                                    <div class="creator">Kush Mohata</div>
-                                </div>
-
-                                <div class="col-6">
-                                    <img class="img-fluid" src="./assets/images/creator.jpg" alt="">
-                                </div>
-                            </div>
+                        <div class="about-right-img">
                         </div>
 
+                        <h4 class="text-black mt-4 creator-title">- Kush Mohata</h4>
                     </div>
                 </div>
             </div>
@@ -209,29 +203,31 @@
         <!-- fixed img end -->
 
         <!-- follow srt -->
-        <section href="#follow" class="follow mt-5 px-4 pe-0">
+        <section id="why-follow-us" class="follow mt-5 px-4 pe-0">
             <div class="container-fluid">
                 <h3 class="banner-welcome">Why Follow us ?</h3>
 
                 <div class="row features mt-4">
-                    <div class="col-lg-4 col-md-6 col-12 mx-auto">
-                        <div class="items items-1">
+                    <div class="col-lg-4 col-md-6 col-12 mx-auto" data-aos="fade-down" data-aos-duration="1200">
+                        <div class="items items-1 px-3">
                             <i class="fa-solid fa-chess fs-2"></i>
                             <h4> Unique Chess Tips</h4>
                             <p>Learn special strategies and tricks you won’t find anywhere else.</p>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 col-12 mt-md-0 mt-3 mx-auto">
-                        <div class="items">
+                    <div class="col-lg-4 col-md-6 col-12 mt-md-0 mt-3 mx-auto" data-aos="fade-down"
+                        data-aos-duration="1400">
+                        <div class="items px-3">
                             <i class="fa-regular fa-face-smile fs-2"></i>
                             <h4> Easy-to-Learn Lessons</h4>
                             <p>Our lessons make chess simple and fun for all levels.</p>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 col-12 mt-lg-0 mx-auto mt-3">
-                        <div class="items items-1">
+                    <div class="col-lg-4 col-md-6 col-12 mt-lg-0 mx-auto mt-3" data-aos="fade-down"
+                        data-aos-duration="1600">
+                        <div class="items items-1 px-3">
                             <i class="fa-solid fa-handshake fs-2"></i>
                             <h4>Fun and Friendly Community </h4>
                             <p>Join a community that shares, learns, and enjoys chess together.</p>
@@ -252,10 +248,10 @@
                 <h4 class="my-3">Some of the Best Content from Chess Magician - </h4>
 
                 <div class="row mt-4">
-                    <div class="col-lg-3 col-md-6 col-12">
+                    <div data-aos="fade-down-right" data-aos-duration="1200" class="col-lg-3 col-sm-6 col-12">
                         <div class="content-main">
-                            <a href="" class="text-decoration-none">
-                                <img class="img-fluid" src="./assets/images/content1.jpg" alt="">
+                            <a href="https://www.youtube.com/shorts/Ob6bRUaIObg" target="_blank"
+                                class="content1 text-decoration-none d-inline-block">
 
                                 <div class="bg">
                                     <i class="fa-brands fa-youtube fs-2 text-white "></i>
@@ -264,10 +260,10 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-12">
+                    <div data-aos="fade-down-right" data-aos-duration="1400" class="col-lg-3 col-sm-6 col-12">
                         <div class="content-main">
-                            <a href="" class="text-decoration-none">
-                                <img class="img-fluid" src="./assets/images/content2.jpg" alt="">
+                            <a href="https://www.youtube.com/shorts/5mAr1r98zso" target="_blank"
+                                class="content2 text-decoration-none d-inline-block">
 
                                 <div class="bg">
                                     <i class="fa-brands fa-youtube fs-2 text-white "></i>
@@ -276,10 +272,10 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-12">
+                    <div data-aos="fade-down-right" data-aos-duration="1600" class="col-lg-3 col-sm-6 col-12">
                         <div class="content-main">
-                            <a href="" class="text-decoration-none">
-                                <img class="img-fluid" src="./assets/images/content3.jpg" alt="">
+                            <a href="https://www.youtube.com/shorts/OCkswPLD3Xs" target="_blank"
+                                class="content3 text-decoration-none d-inline-block">
 
                                 <div class="bg">
                                     <i class="fa-brands fa-youtube fs-2 text-white "></i>
@@ -288,10 +284,10 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-12">
+                    <div data-aos="fade-down-right" data-aos-duration="1800" class="col-lg-3 col-sm-6 col-12">
                         <div class="content-main">
-                            <a href="" class="text-decoration-none">
-                                <img class="img-fluid" src="./assets/images/content4.jpg" alt="">
+                            <a href="https://www.youtube.com/shorts/YLS5sgn2XVA" target="_blank"
+                                class="content4 text-decoration-none d-inline-block">
 
                                 <div class="bg">
                                     <i class="fa-brands fa-youtube fs-2 text-white "></i>
@@ -307,6 +303,29 @@
     <!-- body end -->
 
     <!-- footer srt -->
+    <footer class="">
+        <div class="container-fluid">
+            <section class="main d-flex flex-md-row flex-column align-items-md-center justify-content-between ">
+                <h6>Copyright © 2024, All rights reserved. <i> <span class="title fs-6">Chess Magician </span> </i>
+                </h6>
+
+                <div class="subscribe-button d-flex align-items-center mt-md-0 mt-4">
+                    <a href="https://www.youtube.com/@chessmagician3" class="text-decoration-none me-2" target="_blank">
+                        <button type="button" class="youtube btn btn-secondary">Youtube</button>
+                    </a>
+
+                    <a href="" target="_blank" class="text-decoration-none">
+                        <button type="button" class="instagram btn btn-secondary">Instagram</button>
+                    </a>
+                </div>
+            </section>
+
+            <div class="made-by mt-md-0 mt-4">
+                ~ Made by - Mehul Nawal
+            </div>
+        </div>
+
+    </footer>
     <!-- footer end -->
 
     <!-- bootstrap js link -->
@@ -316,6 +335,12 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
         </script>
+
+    <!-- aos script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- main script  -->
     <script src="./assets/js/script.js"></script>

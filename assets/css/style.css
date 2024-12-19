@@ -4,6 +4,9 @@
 /* hanken font */
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Allura Static font */
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
 
 /* common css srt */
 * {
@@ -16,10 +19,13 @@
     --montserratFont: "Montserrat", sans-serif;
     --robotoFont: "Roboto", serif;
     --hanken: "Hanken Grotesk", serif;
+    --AlluraStatic: "Allura", serif;
 }
 
 body {
     font-family: var(--robotoFont);
+    margin: 0;
+    padding: 0;
 }
 
 ul {
@@ -55,61 +61,87 @@ ul {
     background-color: #C47E31;
 }
 
+.subscribe-button {
+    .youtube {
+        background-color: red;
+        border: 2px solid red;
+        font-size: 13px;
+    }
+
+    .instagram {
+        background: linear-gradient(to top right, #515BD4, #8134AF, #DD2A7B);
+        font-size: 13px;
+    }
+}
+
 /* common css end */
 
 /* header srt */
 header {
-    nav {
-        background-color: #FFF8E1;
-        /* background-color:#FAFAFA; */
-        /* background-color: #F8F8F8; */
-        z-index: 20;
 
-        .logo {
-            font-family: var(--hanken);
-            font-weight: 500;
-            color: #1E3A8A;
-            white-space: nowrap;
+    .navbar-main {
+        z-index: 900;
+        position: fixed !important;
+        top: 0px !important;
+        left: 0px !important;
+        background-color: white;
+        width: 100% !important;
 
-            h5 {
-                position: relative;
-            }
 
-            .chess-piece-img {
-                width: 130px;
-            }
-        }
+        nav {
+            /* z-index: 900;
+        position: absolute !important;
+        top: 0px !important;
+        left: 0px !important;
+        width: 100% !important; */
 
-        h5::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -3px;
-            background-color: #C47E31;
-            height: 2px;
-            width: 0%;
-            transition: all 0.4s ease-in-out;
-        }
-
-        h5:hover::before {
-            width: 100%;
-        }
-
-        .nav-links {
-            a:not(.active) {
+            .logo {
+                font-family: var(--hanken);
+                font-weight: 500;
                 color: #1E3A8A;
-                font-weight: 400;
-                font-family: var(--robotoFont);
-                padding: 12px 20px;
+                white-space: nowrap;
+
+                h5 {
+                    position: relative;
+                }
+
+                .chess-piece-img {
+                    width: 130px;
+                }
             }
 
-            a:hover {
-                /* color: #E74C3C; */
+            h5::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                background-color: #C47E31;
+                height: 2px;
+                width: 0%;
+                transition: all 0.4s ease-in-out;
+            }
+
+            h5:hover::before {
+                width: 100%;
+            }
+
+            .nav-links {
+                a:not(.active) {
+                    color: #1E3A8A;
+                    font-weight: 400;
+                    font-family: var(--robotoFont);
+                    padding: 12px 20px;
+                }
+
+                a:hover {
+                    /* color: #E74C3C; */
+                }
             }
         }
     }
 
     .banner {
+        margin-top: 20px;
 
         .banner-content {
             font-weight: normal;
@@ -130,29 +162,20 @@ header {
                 }
             }
 
-            .subscribe-button {
-                .youtube {
-                    background-color: red;
-                    border: 2px solid red;
-                }
-
-                .instagram {
-                    background: linear-gradient(to top right, #515BD4, #8134AF, #DD2A7B);
-                }
-            }
-
         }
 
         .banner-right {
+            /* overflow: hidden; */
             position: relative;
 
             .banner-right-img {
-                height: 100vh;
+                height: 300px;
+                height: 80vh;
+                margin: 60px 0px;
                 background: url('../images/banner-img-bg.jpg');
                 background-size: contain;
                 background-position: right;
                 background-repeat: no-repeat;
-                background-attachment: fixed;
                 /* z-index: -1; */
             }
 
@@ -161,7 +184,7 @@ header {
                 width: 200px;
                 top: 50%;
                 transform: translateY(-50%);
-                left: 0%;
+                left: 20%;
                 display: inline-block;
             }
         }
@@ -182,24 +205,38 @@ body {
             font-weight: 700;
         }
 
-        .youtube {
-            .title {}
+        .about-right-img {
+            width: 100%;
+            height: 280px;
+            background: url('../images/creator.jpg');
+            background-size: cover;
+            border-radius: 10px;
         }
 
-        .about-right-img {
-            font-family: var(--robotoFont);
-            color: #fff;
-            height: 400px;
-            background: url('../images/about-right-img.jpg');
-            background-size: cover;
-            background-position: center;
-            z-index: 2;
+        .creator-title {
+            font-family: var(--AlluraStatic);
+            font-weight: 600;
+            font-size: 25px;
+        }
+
+        .subscribe-button {
+            .youtube {
+                font-size: 12px;
+            }
+
+            .instagram {
+                font-size: 12px;
+            }
+        }
+
+        .main {
+            width: fit-content;
         }
     }
 
     /* about end */
 
-    /* section3 srt */
+    /* section3 srt - fixed img srt */
     .section3 {
         margin-top: 20px;
         height: 350px;
@@ -215,13 +252,15 @@ body {
 
         .element-shape {
             z-index: -1;
-            margin-top: -136px;
+            margin-top: -115px;
             transform: rotate(180deg);
+            width: 100%;
+            height: 100px;
         }
 
     }
 
-    /* section3 end */
+    /* section3 end - fixed img srt */
 
     /* features srt */
     .follow {
@@ -259,26 +298,60 @@ body {
     /* youtube content srt */
     .youtube-content {
         .content-main {
+            height: 225px;
             border: 2px solid #fff;
             margin-bottom: 20px;
             border-radius: 8px;
             position: relative;
-        }
 
-        .bg {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            background-color: #9c802e;
-            backface-visibility: visible;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            visibility: hidden;
-            opacity: 0;
-            transition: all 0.5s ease-in-out;
+            a {
+                display: inline-block;
+                height: 220px;
+                width: 100%;
+
+                .bg {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    background-color: #9c802e;
+                    backface-visibility: visible;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+
+            .content1 {
+                background: url('../images/content1.jpg');
+                background-size: contain;
+                background-position: center;
+            }
+
+            .content2 {
+                background: url('../images/content2.jpg');
+                background-size: contain;
+                background-position: center;
+            }
+
+            .content3 {
+                background: url('../images/content3.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .content4 {
+                background: url('../images/content4.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
         }
 
         .content-main:hover .bg {
@@ -288,8 +361,22 @@ body {
         }
     }
 
-
     /* youtube content end */
 }
 
 /* body end */
+
+
+/* footer srt */
+footer {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    color: white;
+
+    .title {
+        color: #C47E31;
+    }
+}
+
+/* footer end */
