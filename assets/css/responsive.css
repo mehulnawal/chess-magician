@@ -20,6 +20,20 @@
         margin-top: 20px;
         text-align: center;
     }
+
+    .queen-piece-img {
+        width: 150px !important;
+        top: 50% !important;
+        transform: translateY(-50%);
+        left: 10%;
+    }
 }
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+    .queen-piece-img {
+        width: 120px !important;
+        top: 60% !important;
+        transform: translateY(-50%);
+        left: 10% !important;
+    }
+}

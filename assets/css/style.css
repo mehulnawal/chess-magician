@@ -152,7 +152,7 @@ header {
                 background-size: contain;
                 background-position: right;
                 background-repeat: no-repeat;
-                /* background-attachment: fixed; */
+                background-attachment: fixed;
                 /* z-index: -1; */
             }
 
@@ -162,7 +162,7 @@ header {
                 top: 50%;
                 transform: translateY(-50%);
                 left: 0%;
-                /* z-index: -1; */
+                display: inline-block;
             }
         }
     }
@@ -231,7 +231,8 @@ body {
         }
 
         .items {
-            padding: 0px 20px;
+            text-align: center;
+            padding: 10px 0px;
             height: 180px;
             border-radius: 5px;
             border: 2px solid #C47E31;
@@ -239,13 +240,10 @@ body {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 8px;
 
             h4 {
-                margin: 10px 0px;
-            }
-
-            p {
-                text-align: center;
+                /* margin: 0px 0px 20px 0px; */
             }
         }
 
